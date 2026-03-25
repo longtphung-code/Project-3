@@ -37,7 +37,7 @@ int main() {
 	double total_flour = flour_per_cookie * cookies;
 
 	//formating output
-	cout << fixed << setprecision(2);
+	cout << fixed << setprecision(3);
 
 
 	// display results
