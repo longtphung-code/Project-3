@@ -18,7 +18,7 @@ int main() {
 
 	//display problem
 	std::cout << "What is " << num1 << " + " << num2 << "?\n";
-
+	
 	//pause progoram
 	std::cout << "Press Enter when you're ready to see the answer...";
 	std::cin.ignore();	//clears buffer
