@@ -3,29 +3,43 @@
 //Ask for user inpute and make the cookies required into a ratio of the ingredients
 
 #include <iostream>
-#include <random>
+#include <cmath>
+#include <iomanip>
+using namespace std;
 
 int main() {
-	// random number generator
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<> distrib_int(1, 100);
+	// Input princpal amount
+	std::cout << "What is the principal amount? ";
+	double principal;
+	cin >> principal;
 
-	//generate two random numbers
-	int num1 = distrib_int(gen);
-	int num2 = distrib_int(gen);
-	int correctAnswer = num1 + num2;
+	//Input rate of interest as a percentage
+	std::cout << "What is the interest rate in percentage?: ";
+	double rate;
+	cin >> rate;
 
-	//display problem
-	std::cout << "What is " << num1 << " + " << num2 << "?\n";
-	
-	//pause progoram
-	std::cout << "Press Enter when you're ready to see the answer...";
-	std::cin.ignore();	//clears buffer
-	std::cin.get(); 	//waits for user input
+	// convert to percentage to decimal
+	rate = rate / 100;
 
-	//display answer
-	std::cout << "The correct answer is: " << correctAnswer << std::endl;
+	//take user input for time the interest is compounded during a year 
+
+	cout << "How many times is the interest compounded a year? ";
+	int timesCompounded;
+	cin >> timesCompounded;	
+
+	// Calculate the amount of interest earned
+	double amount = principal * pow((1 + rate / timesCompounded), timesCompounded);
+	double interestEarned = amount - principal;
+
+
+	//display the report
+	cout << fixed << setprecision(2);
+	cout << "\nInterest Rate: " << rate * 100 << "%\n";
+	cout << "Times Compounded: " << timesCompounded << "\n";
+	cout << "Principal : $" << principal << "\n";
+	cout << "Interest Earned: $" << interestEarned << "\n";
+	cout << "Amount in Savings: $" << amount << "\n";
 
 	return 0;
-}
+	}
+
