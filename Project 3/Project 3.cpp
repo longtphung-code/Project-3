@@ -27,9 +27,9 @@ int main() {
 
 	//Calculate per-cookie amount based on original 48 scale
 	double sugar_per_cookie = sugar_amount / original_cookies;
-	double butter_per_cookie = butter_amount /original_cookies;
-	double flour_per_cookie = flour_amount /original_cookies;
-	
+	double butter_per_cookie = butter_amount / original_cookies;
+	double flour_per_cookie = flour_amount / original_cookies;
+
 
 	// scale to desiredcookies
 	double total_sugar = sugar_per_cookie * cookies;
@@ -37,7 +37,7 @@ int main() {
 	double total_flour = flour_per_cookie * cookies;
 
 	//formating output
-	cout << fixed << setprecision(2);
+	cout << fixed << setprecision(3);
 
 
 	// display results
@@ -47,6 +47,6 @@ int main() {
 	cout << "Flour: " << total_flour << " cups\n";
 	cout << "\nThis recipe will produce " << cookies << " cookies.\n";
 
-	
+
 	return 0;
 }
