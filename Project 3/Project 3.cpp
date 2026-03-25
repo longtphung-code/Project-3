@@ -22,7 +22,6 @@ int main() {
 	rate = rate / 100;
 
 	//take user input for time the interest is compounded during a year 
-
 	cout << "How many times is the interest compounded a year? ";
 	int timesCompounded;
 	cin >> timesCompounded;	
