@@ -47,6 +47,6 @@ int main() {
 	cout << "Flour: " << total_flour << " cups\n";
 	cout << "\nThis recipe will produce " << cookies << " cookies.\n";
 
-
+	
 	return 0;
 }
